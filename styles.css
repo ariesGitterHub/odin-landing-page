@@ -3,128 +3,171 @@
 :root {
     --dkgrey: #1f2937;
     --white: #f9faf8;
-    --ltgrey: #bcbbb7;
+    --ltgrey: #a8a2a2;
     --md-blue: #3882f6;
     --zodiac-blue: #fbfdff;
     --dkblue: #2c4b7d;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+    --content-width: 75vw;
 }
 
 * {
-    margin: auto;
-    padding: 0px;
     border: 2px dotted darkred;
+}
+
+body {
+    display: inline-block;
     font-family: 'Roboto', sans-serif;
+    margin: auto;
+    vertical-align: middle; 
 }
 
-nav, header, info-section, quote-section, footer {
-    width: 80vw;
-    padding: 5px 50px 5px 50px;
-}
-
-nav, header, footer {
+/* NAVBAR */
+nav {
     background-color: var(--dkgrey);
     color: var(--white);
-    display: flex;
 }
 
-nav h3 {
-    justify-content: start;
+nav-view {
+    display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+    max-width: var(--content-width);
+    margin: auto;
+}
+
+nav-view h3 {
+    justify-content: flex-start;
+    margin-right: auto;
+}
+
+link-section {
+    justify-content: flex-end;
+    /* margin: auto; */
 }
 
 nav a {
-    justify-content: end;
+    color: var(--ltgrey);
+    padding-left: 10px;
 }
 
-a {
-    color: var(--ltgrey);
-    /* align-items: end; */
-}
+/* HEADER */
 
 header {
-    font-size: 48px;
-    font-weight: bolder;
-}
-header-left {
-    width: 65%;
-    /* display: flex;
-    flex-direction: column; */
+    background-color: var(--dkgrey);
+    color: var(--white);
 }
 
-header-left button{
-
+header-view {
+    display: flex;
+        /* align-items: center; */
+        /* justify-content: space-evenly; */
+    margin: auto;
+    /* padding: 0 30px 0 30px; */
+    max-width: var(--content-width);
 }
 
-header p {
-    font-size: 20px;
-}
-
-header img {
+header-view img {
     width: 340px;
     padding-left: 20px;
 }
 
-.alt-text {
-    color: var(--ltgrey);
-    font-size: 18px;
+header-left {
+    display: block;
+    margin: auto;
 }
+
+header-left h2 {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+header-left p {
+    font-size: 24px;
+    margin-top: -30px;
+}
+
+header-left button {
+    margin-top: -30px;
+}
+
+/* INFO SECTION */
 
 info-section {
     font-size: 36px;
     font-weight: bolder;
     color: var(--dkgrey); 
     text-align: center;
-    justify-content: center;
+    max-width: var(--content-width);
 }
 
 info-section h2 {
-    padding-top: 20px;
+    margin: auto;
 }
 
-img-text-box-row {
+info-section-view {
     display: flex;
-    gap: 10px;
-    padding-bottom: 50px;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+}
+img-text-box p {
+    color: var(--dkgrey);
+    font-size: 18px;
 }
 
-info-section img {
+info-section-view img {
     width: 200px;
-    height: 160px;
+    height: 150px;
     border: 5px solid var(--md-blue);
     border-radius: 30px;
 }
 
+/* QUOTE SECTION */
+
 quote-section {
-    font-size: 28px;
-    font-style: italic;
     background-color: var(--ltgrey);
     color: var(--dkgrey);
+    display: block;
 }
 
 blockquote {
-    padding: 50px;
     text-align: justify;
+    font-size: 24px;
+    font-style: italic;
+    max-width: var(--content-width);
+    margin: auto;
 }
 
 blockquote h6 {
+    font-size: 18px;
+    font-weight: bold;
     text-align: right;
-    padding: 10px;
 }
 
+quote-view {
+
+}
+
+/* SIGN UP SECTION */
+
 sign-up-section {
-    padding: 50px 0 50px 0;
+    /* padding: 50px 0 50px 0; */
+    /* margin: auto; */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+sign-up-view {
+    max-width: var(--content-width);
 }
 
 call-to-action-box {
-    /* margin: 30px 0 30px 0; */
+    /* max-width: var(--content-width); */
     padding: 20px;
+    /* margin: auto; */
     border-radius: 10px;
-    color: var(--white)
+    color: var(--white);
+    display: flex;
 }
 
 call-to-action-text {
@@ -136,30 +179,31 @@ call-to-action-text h3 {
     padding-bottom: 5px;
 }
 
-button-box {
-
-}
-
-call-to-action-box {
-    display: flex;
-}
-
-call-to-action-box, button {
+call-to-action-box{
     background-color: var(--md-blue);
 }
 
-button {
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 30px;
-    border: 5px solid var(--white);
-    color: var(--white);
-}
+
+
+/* FOOTER */
 
 footer {
+    background-color: var(--dkgrey);
+    color: var(--white);
     text-align: center;
 }
 
 footer p {
+    padding: 10px;
+}
+
+/* OTHER */
+
+button {
+    background-color: var(--md-blue);
+    border: 5px solid var(--white);
+    border-radius: 30px;
+    color: var(--white);
+    font-size: 20px;
     padding: 10px;
 }
