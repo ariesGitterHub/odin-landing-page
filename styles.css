@@ -7,12 +7,15 @@
     --md-blue: #3882f6;
     --zodiac-blue: #fbfdff;
     --dkblue: #2c4b7d;
-    --content-width: 70%;
+    --content-width: 65%;
 }
 
 * {
-    border: 2px dotted darkred;
-        font-family: 'Roboto', sans-serif;
+    /* Use dark red border to aid in aligning boxes. */
+    /* border: 2px dotted darkred; */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 body {
@@ -67,13 +70,23 @@ header-view {
 }
 
 header-view img {
-    width: 300px;
+    width: 30vw;
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    /* animation */
+    animation: wheel-spin infinite 45s linear;
+    transition: filter 3000ms;
 }
 
-/* TODO animate the wheel */
+@keyframes wheel-spin {
+from {
+  transform: rotate(360deg);
+}
+to {
+  transform: rotate(0deg);
+}
+}
 
 header-left {
     display: block;
@@ -97,6 +110,7 @@ header-left button {
 /* INFO SECTION */
 
 info-section {
+    background-color: var(--white);
     color: var(--dkgrey); 
     display: flex;
         flex-direction: column;
@@ -163,43 +177,42 @@ blockquote h6 {
     padding-top: 20px;
 }
 
-
 /* SIGN UP SECTION */
 
 sign-up-section {
-    /* padding: 50px 0 50px 0; */
-    /* margin: auto; */
-    /* display: flex;
-    flex-direction: column; */
+    background-color: var(--white);
 }
 
 sign-up-view {
-    max-width: var(--content-width);
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    padding: 48px 0 48px 0;
 }
 
 call-to-action-box {
-    /* max-width: var(--content-width); */
-    padding: 20px;
-    /* margin: auto; */
+     background-color: var(--md-blue);
     border-radius: 10px;
     color: var(--white);
     display: flex;
+        align-items: center;
+        justify-content: space-around;
+    max-width: var(--content-width);
+    padding: 10px;
 }
 
 call-to-action-text {
-    padding: 10px;
-    width: 70%;
+    max-width: var(--content-width);
+    /* padding: 10px; */
 }
 
 call-to-action-text h3 {
-    padding-bottom: 5px;
+    margin-bottom: -10px;
 }
 
-call-to-action-box{
-    background-color: var(--md-blue);
+call-to-action-text p {
+    font-size: 14px;
 }
-
-
 
 /* FOOTER */
 
