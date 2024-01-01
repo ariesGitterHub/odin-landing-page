@@ -7,7 +7,7 @@
     --md-blue: #3882f6;
     --zodiac-blue: #fbfdff;
     --dkblue: #2c4b7d;
-    --content-width: 65%;
+    --content-width: 750px;
 }
 
 * {
@@ -15,13 +15,12 @@
     /* border: 2px dotted darkred; */
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
 }
 
 body {
-    display: inline-block;~
+    width: 100vw;
+    display: inline-block;
     margin: auto;
-    vertical-align: middle; 
 }
 
 /* NAVBAR */
@@ -34,7 +33,7 @@ nav-view {
     display: flex;
         align-items: baseline;
         justify-content: space-evenly;
-    max-width: var(--content-width);
+    width: var(--content-width);
     margin: auto;
 }
 
@@ -45,7 +44,6 @@ nav-view h3 {
 
 link-section {
     justify-content: flex-end;
-    /* margin: auto; */
 }
 
 nav a {
@@ -62,18 +60,14 @@ header {
 
 header-view {
     display: flex;
-        /* align-items: center; */
-        /* justify-content: space-evenly; */
     margin: auto;
-    /* padding: 0 30px 0 30px; */
-    max-width: var(--content-width);
+    width: var(--content-width);
 }
 
 header-view img {
-    width: 30vw;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    max-width: 400px;
+    padding: 30px;
+    
     /* animation */
     animation: wheel-spin infinite 45s linear;
     transition: filter 3000ms;
@@ -100,11 +94,11 @@ header-left h2 {
 
 header-left p {
     font-size: 24px;
-    margin-top: -30px;
+    margin-top: -35px;
 }
 
 header-left button {
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 /* INFO SECTION */
@@ -112,32 +106,29 @@ header-left button {
 info-section {
     background-color: var(--white);
     color: var(--dkgrey); 
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* gap: 20px; */
-        justify-content: center;
+    display: block;
     font-size: 36px;
     font-weight: bolder;
     padding: 40px 0 40px 0;
+    margin: 0 -10px;
     text-align: center;
-        
 }
 
 info-section h2 {
     margin: auto;
+    padding: 10px;
 }
 
 info-section-view {
     display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        justify-content: space-evenly;
-    max-width: var(--content-width);
+        justify-content: center;
 }
+
 img-text-box p {
     color: var(--dkgrey);
     font-size: 18px;
+    text-align: center;
 }
 
 info-section-view img {
@@ -145,6 +136,7 @@ info-section-view img {
     height: 120px;
     border: 5px solid var(--md-blue);
     border-radius: 30px;
+    margin: 0 10px;
 }
 
 /* QUOTE SECTION */
@@ -162,19 +154,19 @@ quote-view {
 }
 
 blockquote {
-    text-align: justify;
     font-size: 24px;
     font-style: italic;
     max-width: var(--content-width);
     padding: 48px 0 48px 0;
+    text-align: justify;
 }
 
 blockquote h6 {
     font-size: 18px;
     font-weight: bold;
-    text-align: right;
     margin: auto;
     padding-top: 20px;
+    text-align: right;
 }
 
 /* SIGN UP SECTION */
@@ -191,18 +183,22 @@ sign-up-view {
 }
 
 call-to-action-box {
-     background-color: var(--md-blue);
-    border-radius: 10px;
+    width: var(--content-width);
+    background-color: var(--md-blue);
+    border-radius: 310px;
     color: var(--white);
     display: flex;
         align-items: center;
         justify-content: space-around;
-    max-width: var(--content-width);
-    padding: 10px;
+    padding: 20px;
+}
+
+call-to-action-box button {
+    margin: 10px;
 }
 
 call-to-action-text {
-    max-width: var(--content-width);
+    max-width: 90%;
     /* padding: 10px; */
 }
 
@@ -235,5 +231,6 @@ button {
     border-radius: 30px;
     color: var(--white);
     font-size: 20px;
+    margin: 10px 0 10px 0;
     padding: 10px;
 }
